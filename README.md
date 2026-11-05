@@ -24,6 +24,4 @@ Python, LangGraph, GigaChat API, SymPy, ChromaDB
 
 ## Запуск
 
-Скоро будет
-
-Павлик бог футбола
+Скоро будет.
