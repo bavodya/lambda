@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# lambda
+chroma_db/
+results/
+.vscode/
+.idea/
