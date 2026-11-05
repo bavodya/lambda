@@ -24,4 +24,4 @@ Python, LangGraph, GigaChat API, SymPy, ChromaDB
 
 ## Запуск
 
-Скоро будет.
+Скоро будет
