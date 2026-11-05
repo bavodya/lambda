@@ -26,5 +26,5 @@ Python, LangGraph, GigaChat API, SymPy, ChromaDB
 
 Скоро будет
 
-by SMF
+by Шамиль
 
