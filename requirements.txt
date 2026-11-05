@@ -1,0 +1,6 @@
+langgraph
+chromadb
+sympy
+google-genai
+gigachat
+python-dotenv
