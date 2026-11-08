@@ -60,7 +60,7 @@ def diagnose(state):
 }}
 """
 
-    response = call_llm(prompt, fast=True)
+    response = call_llm(prompt)
 
     if not isinstance(response, str):
         raise ValueError("Диагност не вернул текстовый ответ")

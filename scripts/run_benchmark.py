@@ -91,6 +91,8 @@ def run_benchmark(dataset_path: str = "data/dataset.json", output_path: str = "r
     step_matches = 0
     detailed_results = []
 
+    failed_tasks = []
+
     for task in tasks:
         # State графа согласно Разделу 4 CONTRACT.md
         input_state = {
@@ -103,7 +105,12 @@ def run_benchmark(dataset_path: str = "data/dataset.json", output_path: str = "r
             "hint_level": 1
         }
 
-        output_state = app.invoke(input_state)
+        try:
+            output_state = app.invoke(input_state)
+        except Exception as e:
+            print(f"Задача {task['id']}: ОШИБКА графа — {e}")
+            failed_tasks.append({"task_id": task["id"], "error": str(e)})
+            continue
 
         pred_type = output_state.get("error_type", "none")
         pred_step = output_state.get("error_step", None)
@@ -127,8 +134,9 @@ def run_benchmark(dataset_path: str = "data/dataset.json", output_path: str = "r
         })
 
     metrics = calculate_metrics(y_true, y_pred)
-    step_accuracy = step_matches / len(tasks) if tasks else 0.0
+    step_accuracy = step_matches / len(y_true) if y_true else 0.0
     metrics["step_accuracy"] = round(step_accuracy, 4)
+    metrics["failed_count"] = len(failed_tasks)
 
     # Вывод сводной таблицы в терминал
     print("\n" + "=" * 55)
@@ -145,7 +153,8 @@ def run_benchmark(dataset_path: str = "data/dataset.json", output_path: str = "r
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump({"summary": metrics, "details": detailed_results}, f, ensure_ascii=False, indent=2)
+        json.dump({"summary": metrics, "details": detailed_results, "failed": failed_tasks}, f, ensure_ascii=False,
+                  indent=2)
 
     print(f" Результаты сохранены в: {output_path}")
 
