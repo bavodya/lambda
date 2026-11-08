@@ -87,7 +87,7 @@ def tutor(state):
 }}
 """
 
-    response = call_llm(prompt)
+    response = call_llm(prompt, fast=True)
 
     if not isinstance(response, str):
         raise ValueError("Тьютор не вернул текстовый ответ")
