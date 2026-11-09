@@ -221,6 +221,7 @@ __marimo__/
 
 # lambda
 chroma_db/
-results/
+results/*
+!results/metrics.json
 .vscode/
 .idea/

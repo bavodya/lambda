@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "accuracy": 0.8,
+    "macro_f1": 0.8,
+    "weighted_f1": 0.8,
+    "per_class": {
+      "odz": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "support": 2
+      },
+      "non_equivalent": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "support": 2
+      },
+      "sign": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "arithmetic": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "none": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
+        "support": 2
+      }
+    },
+    "step_accuracy": 0.7,
+    "failed_count": 0
+  },
+  "details": [
+    {
+      "task_id": 1,
+      "true_error_type": "none",
+      "pred_error_type": "odz",
+      "true_error_step": null,
+      "pred_error_step": 4,
+      "hint": "Посмотри на исходное уравнение: всегда ли под знаком логарифма может находиться любое число?"
+    },
+    {
+      "task_id": 2,
+      "true_error_type": "odz",
+      "pred_error_type": "odz",
+      "true_error_step": 5,
+      "pred_error_step": 4,
+      "hint": "Ты верно нашёл корни квадратного уравнения, но всегда ли найденные значения подходят для исходного уравнения с логарифмами? Вспомни, на каких множествах определены исходные логарифмы."
+    },
+    {
+      "task_id": 3,
+      "true_error_type": "non_equivalent",
+      "pred_error_type": "odz",
+      "true_error_step": 5,
+      "pred_error_step": 5,
+      "hint": "Ты верно нашёл корни квадратного уравнения, но всегда ли каждое из найденных значений подходит для исходного иррационального уравнения с квадратным корнем? Попробуй подставить каждый корень в левую и правую части исходного уравнения."
+    },
+    {
+      "task_id": 4,
+      "true_error_type": "non_equivalent",
+      "pred_error_type": "non_equivalent",
+      "true_error_step": 1,
+      "pred_error_step": 1,
+      "hint": "Вспомни, всегда ли можно умножать или делить обе части неравенства на выражение с переменной, знак которого нам заранее неизвестен."
+    },
+    {
+      "task_id": 5,
+      "true_error_type": "sign",
+      "pred_error_type": "sign",
+      "true_error_step": 2,
+      "pred_error_step": 2,
+      "hint": "Посмотри на шаг 2: что происходит со знаком неравенства, когда мы делим обе его части на отрицательное число?"
+    },
+    {
+      "task_id": 6,
+      "true_error_type": "odz",
+      "pred_error_type": "odz",
+      "true_error_step": 2,
+      "pred_error_step": 1,
+      "hint": "Посмотри внимательно на исходное уравнение: есть ли какие-то ограничения на значение переменной $x$, учитывая, что выражение находится в знаменателе дроби?"
+    },
+    {
+      "task_id": 7,
+      "true_error_type": "arithmetic",
+      "pred_error_type": "arithmetic",
+      "true_error_step": 2,
+      "pred_error_step": 2,
+      "hint": "Посмотри внимательно на формулу корней квадратного уравнения и значение коэффициента a в знаменателе. Все ли элементы формулы ты учёл во втором шаге?"
+    },
+    {
+      "task_id": 8,
+      "true_error_type": "none",
+      "pred_error_type": "none",
+      "true_error_step": null,
+      "pred_error_step": null,
+      "hint": "Посмотри внимательно на каждый шаг решения. Действительно ли всё выполнено верно, или стоит ещё раз проверить знаки и промежутки?"
+    },
+    {
+      "task_id": 9,
+      "true_error_type": "sign",
+      "pred_error_type": "sign",
+      "true_error_step": 3,
+      "pred_error_step": 3,
+      "hint": "Посмотри внимательно на шаг 2 и шаг 3. Что происходит со знаками слагаемых при переносе их из одной части неравенства в другую?"
+    },
+    {
+      "task_id": 10,
+      "true_error_type": "arithmetic",
+      "pred_error_type": "arithmetic",
+      "true_error_step": 2,
+      "pred_error_step": 2,
+      "hint": "Посмотри внимательно на второй шаг: правильно ли выполнено вычисление в скобках $(3^2 - 1)$?"
+    }
+  ],
+  "failed": []
+}
