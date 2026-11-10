@@ -50,7 +50,7 @@ Python, LangGraph, Gemini API (бесплатный тариф)
    ```bash
    cp .env.example .env
    ```
-   `GEMINI_API_KEY` — получить бесплатно на [aistudio.google.com](https://aistudio.google.com), раздел API keys. `GEMINI_MODEL` и `GEMINI_MODEL_FAST` можно оставить значения по умолчанию из `.env.example`.
+   `GEMINI_API_KEY` — получить на [aistudio.google.com](https://aistudio.google.com), раздел API keys. `GEMINI_MODEL` и `GEMINI_MODEL_FAST` можно оставить значения по умолчанию из `.env.example`.
 4. Запустить бенчмарк из **корня проекта**:
    ```bash
    # Windows (cmd):
